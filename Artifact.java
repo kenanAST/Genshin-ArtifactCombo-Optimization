@@ -8,9 +8,9 @@ class Artifact{
     private String setName;
 
     //Artifact Stats
-    private int flatHP = 0;
-    private int percentHP = 0;
-    private int flatATK = 0;
+    private int flatHP;
+    private int percentHP;
+    private int flatATK;
     private int percentATK;
     private int flatDEF;
     private int percentDEF;
