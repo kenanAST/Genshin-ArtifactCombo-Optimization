@@ -1,5 +1,3 @@
-import java.util.*;
-
 class Artifact{
 
     // Artifact Type
@@ -60,7 +58,7 @@ class Artifact{
         return this.elementalMastery;
     }
 
-    public int percentRecharge(){
+    public int get_percentRecharge(){
         return this.percentRecharge;
     }
 

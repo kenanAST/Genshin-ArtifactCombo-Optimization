@@ -1,4 +1,8 @@
-import Artifact
+import java.util.*;
 
+class Main{
+    public static void main(String[] args) {
 
-print('Hello World')
+        Artifact kenan = new Artifact("afsaf","asfasfsa","Asfasfasfd");
+    }
+}
