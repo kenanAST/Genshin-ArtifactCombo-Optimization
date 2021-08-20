@@ -1,10 +1,10 @@
 public class ArtifactSet {
+    
     private Artifact flower;
     private Artifact plume;
     private Artifact eon;
     private Artifact goblet;
     private Artifact circlet;
-
 
     public int total_flatHP(){
         return (flower.get_flatHP() + plume.get_flatHP() + eon.get_flatHP() + goblet.get_flatHP() + circlet.get_flatHP());
