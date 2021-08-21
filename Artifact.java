@@ -1,88 +1,205 @@
 class Artifact{
 
     // Artifact Type
-    private String name;
-    private String type;
-    private String setName;
+    public String level;
+    public String type;
+    public String setName;
 
     //Artifact Stats
-    private int healingBonus;
-    private int physicalDMGBonus;
-    private int elementalDMGBonus;
-    private int flatHP;
-    private int percentHP;
-    private int flatATK;
-    private int percentATK;
-    private int flatDEF;
-    private int percentDEF;
-    private int elementalMastery;
-    private int percentRecharge;
-    private int critRate;
-    private int critDMG;
+    private float healingBonus;
+    private float physicalDMGBonus;
+    private float pyroDMGBonus;
+    private float geoDMGBonus;
+    private float dendroDMGBonus;
+    private float cryoDMGBonus;
+    private float electroDMGBonus;
+    private float anemoDMGBonus;
+    private float hydroDMGBonus;
 
-    Artifact(String name, String type, String setName){
-        this.name = name;
+    //sub stats
+    private float flatHP;
+    private float percentHP;
+    private float flatATK;
+    private float percentATK;
+    private float flatDEF;
+    private float percentDEF;
+    private float elementalMastery;
+    private float percentRecharge;
+    private float critRate;
+    private float critDMG;
+
+    Artifact(String level, String type, String setName){
+        this.level = level;
         this.type = type;
         this.setName = setName;
     }
 
+    //setter Stats
+
+    public void set_healingBonus(float healingBonus){
+        this.healingBonus = healingBonus;
+    }
+
+    public void set_physicalDMGBonus(float physicalDMGBonus){
+        this.physicalDMGBonus = physicalDMGBonus;
+    }
+
+    public void set_pyroDMGBonus(float pyroDMGBonus){
+        this.pyroDMGBonus = pyroDMGBonus;
+    }
+
+    public void set_geoDMGBonus(float geoDMGBonus){
+        this.geoDMGBonus = geoDMGBonus;
+    }
+
+    public void set_dendroDMGBonus(float dendroDMGBonus){
+        this.dendroDMGBonus = dendroDMGBonus;
+    }
+
+    public void set_cryoDMGBonus(float cryoDMGBonus){
+        this.cryoDMGBonus = cryoDMGBonus;
+    }
+
+    public void set_electroDMGBonus(float electroDMGBonus){
+        this.electroDMGBonus = electroDMGBonus;
+    }
+
+    public void set_anemoDMGBonus(float anemoDMGBonus){
+        this.anemoDMGBonus = anemoDMGBonus;
+    }
+
+    public void set_hydroDMGBonus(float hydroDMGBonus){
+        this.hydroDMGBonus = hydroDMGBonus;
+    }
+
+    public void set_flatHP(float flatHP){
+        this.flatHP = flatHP;
+    }
+
+    public void set_percentHP(float percentHP){
+        this.percentHP = percentHP;
+    }
+
+
+    public void set_flatATK(float flatATK){
+        this.flatATK = flatATK;
+    }
+
+
+    public void set_percentATK(float percentATK){
+        this.percentATK = percentATK;
+    }
+
+
+    public void set_flatDEF(float flatDEF){
+        this.flatDEF = flatDEF;
+    }
+
+
+    public void set_percentDEF(float percentDEF){
+        this.percentDEF = percentDEF;
+    }
+
+
+    public void set_elementalMastery(float elementalMastery){
+        this.elementalMastery = elementalMastery;
+    }
+
+    public void set_percentRecharge(float percentRecharge){
+        this.percentRecharge = percentRecharge;
+    }
+
+    public void set_critRate(float critRate){
+        this.critRate = critRate;
+    }
+
+    public void set_critDMG(float critDMG){
+        this.critDMG = critDMG;
+    }
+
+
+
 
     //getter Stats
 
-    public int get_healingBonus(){
+    public float get_healingBonus(){
         return this.healingBonus;
     }
 
-    public int get_physicalDMGBonus(){
+    public float get_physicalDMGBonus(){
         return this.physicalDMGBonus;
     }
 
-    public int get_elementalDMGBonus(){
-        return this.elementalDMGBonus;
+    public float get_pyroDMGBonus(){
+        return this.pyroDMGBonus;
     }
 
-    public int get_flatHP(){
+    public float get_geoDMGBonus(){
+        return this.geoDMGBonus;
+    }
+
+    public float get_dendroDMGBonus(){
+        return this.dendroDMGBonus;
+    }
+
+    public float get_cryoDMGBonus(){
+        return this.cryoDMGBonus;
+    }
+
+    public float get_electroDMGBonus(){
+        return this.electroDMGBonus;
+    }
+
+    public float get_anemoDMGBonus(){
+        return this.anemoDMGBonus;
+    }
+
+    public float get_hydroDMGBonus(){
+        return this.hydroDMGBonus;
+    }
+
+    public float get_flatHP(){
         return this.flatHP;
     }
 
-    public int get_percentHP(){
+    public float get_percentHP(){
         return this.percentHP;
     }
 
 
-    public int get_flatATK(){
+    public float get_flatATK(){
         return this.flatATK;
     }
 
 
-    public int get_percentATK(){
+    public float get_percentATK(){
         return this.percentATK;
     }
 
 
-    public int get_flatDEF(){
+    public float get_flatDEF(){
         return this.flatDEF;
     }
 
 
-    public int get_percentDEF(){
+    public float get_percentDEF(){
         return this.percentDEF;
     }
 
 
-    public int get_elementalMastery(){
+    public float get_elementalMastery(){
         return this.elementalMastery;
     }
 
-    public int get_percentRecharge(){
+    public float get_percentRecharge(){
         return this.percentRecharge;
     }
 
-    public int get_critRate(){
+    public float get_critRate(){
         return this.critRate;
     }
 
-    public int get_critDMG(){
+    public float get_critDMG(){
         return this.critDMG;
     }
 
