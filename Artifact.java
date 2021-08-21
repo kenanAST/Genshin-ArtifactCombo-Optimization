@@ -6,6 +6,9 @@ class Artifact{
     private String setName;
 
     //Artifact Stats
+    private int healingBonus;
+    private int physicalDMGBonus;
+    private int elementalDMGBonus;
     private int flatHP;
     private int percentHP;
     private int flatATK;
@@ -25,6 +28,19 @@ class Artifact{
 
 
     //getter Stats
+
+    public int get_healingBonus(){
+        return this.healingBonus;
+    }
+
+    public int get_physicalDMGBonus(){
+        return this.physicalDMGBonus;
+    }
+
+    public int get_elementalDMGBonus(){
+        return this.elementalDMGBonus;
+    }
+
     public int get_flatHP(){
         return this.flatHP;
     }
