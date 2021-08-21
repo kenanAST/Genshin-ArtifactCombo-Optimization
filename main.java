@@ -203,7 +203,7 @@ class Main{
 
         PrintWriter pw = new PrintWriter(fw);
 
-        pw.write("Artifact Set, Flat HP, Percent HP, FLat ATK, Percent ATK, Flat DEF, Percent DEF, Elemental Mastery, Percent Recharge, CRIT Rate, CRIT DMG, Healing Bonus, Physical DMG Bonus, Pyro DMG Bonus, Geo DMG Bonus, Dendro DMG Bonus, Cryo DMG Bonus, Electro DMG Bonus, Anemo DMG Bonus, Hydro DMG Bonus");
+        pw.write("Artifact Set, Flat HP, Percent HP, FLat ATK, Percent ATK, Flat DEF, Percent DEF, Elemental Mastery, Percent Recharge, CRIT Rate, CRIT DMG, Healing Bonus, Physical DMG Bonus, Pyro DMG Bonus, Geo DMG Bonus, Dendro DMG Bonus, Cryo DMG Bonus, Electro DMG Bonus, Anemo DMG Bonus, Hydro DMG Bonus\r\n");
 
         int count = 1;
         for(int i = 0; i<flower.size(); i++){
@@ -236,7 +236,7 @@ class Main{
                                 as.total_cryoDMGBonus() + "," +
                                 as.total_electroDMGBonus() + "," +
                                 as.total_anemoDMGBonus() + "," +
-                                as.total_hydroDMGBonus()
+                                as.total_hydroDMGBonus() + "\r\n"
                             );
                             System.out.println( count + ". " + as.total_flatATK());
                             count++;
