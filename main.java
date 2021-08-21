@@ -6,51 +6,51 @@ import java.util.*;
 
 class Main{
 
-    public static Stack<Artifact> flowerList(Artifact[] artifacts){
-        Stack<Artifact> flower = new Stack<Artifact>();
+    public static ArrayList<Artifact> flowerList(Artifact[] artifacts){
+        ArrayList<Artifact> flower = new ArrayList<Artifact>();
         for(int i = 0; i<artifacts.length; i++){
             if(artifacts[i].type.equals("Flower")){
-                flower.push(artifacts[i]);
+                flower.add(artifacts[i]);
             }
         }
         return flower;
     }
 
-    public static Stack<Artifact> plumeList(Artifact[] artifacts){
-        Stack<Artifact> plume = new Stack<Artifact>();
+    public static ArrayList<Artifact> plumeList(Artifact[] artifacts){
+        ArrayList<Artifact> plume = new ArrayList<Artifact>();
         for(int i = 0; i<artifacts.length; i++){
             if(artifacts[i].type.equals("Plume")){
-                plume.push(artifacts[i]);
+                plume.add(artifacts[i]);
             }
         }
         return plume;
     }
 
-    public static Stack<Artifact> eonList(Artifact[] artifacts){
-        Stack<Artifact> eon = new Stack<Artifact>();
+    public static ArrayList<Artifact> eonList(Artifact[] artifacts){
+        ArrayList<Artifact> eon = new ArrayList<Artifact>();
         for(int i = 0; i<artifacts.length; i++){
             if(artifacts[i].type.equals("Sands")){
-                eon.push(artifacts[i]);
+                eon.add(artifacts[i]);
             }
         }
         return eon;
     }
 
-    public static Stack<Artifact> gobletList(Artifact[] artifacts){
-        Stack<Artifact> goblet = new Stack<Artifact>();
+    public static ArrayList<Artifact> gobletList(Artifact[] artifacts){
+        ArrayList<Artifact> goblet = new ArrayList<Artifact>();
         for(int i = 0; i<artifacts.length; i++){
             if(artifacts[i].type.equals("Goblet")){
-                goblet.push(artifacts[i]);
+                goblet.add(artifacts[i]);
             }
         }
         return goblet;
     }
 
-    public static Stack<Artifact> circletList(Artifact[] artifacts){
-        Stack<Artifact> circlet = new Stack<Artifact>();
+    public static ArrayList<Artifact> circletList(Artifact[] artifacts){
+        ArrayList<Artifact> circlet = new ArrayList<Artifact>();
         for(int i = 0; i<artifacts.length; i++){
             if(artifacts[i].type.equals("Circlet")){
-                circlet.push(artifacts[i]);
+                circlet.add(artifacts[i]);
             }
         }
         return circlet;
@@ -181,13 +181,16 @@ class Main{
         System.out.println(kenan[174].type);
         System.out.println(kenan[174].type);
 
-        Stack<Artifact> flower = flowerList(kenan);
-        Stack<Artifact> plume = plumeList(kenan);
-        Stack<Artifact> eon = eonList(kenan);
-        Stack<Artifact> goblet = gobletList(kenan);
-        Stack<Artifact> circlet = circletList(kenan);
+        ArrayList<Artifact> flower = flowerList(kenan);
+        ArrayList<Artifact> plume = plumeList(kenan);
+        ArrayList<Artifact> eon = eonList(kenan);
+        ArrayList<Artifact> goblet = gobletList(kenan);
+        ArrayList<Artifact> circlet = circletList(kenan);
         
         System.out.println(flower.size() + " " + plume.size() + " " + eon.size() + " " + goblet.size() + " " + circlet.size());
+
+
+
 
     }
 }
