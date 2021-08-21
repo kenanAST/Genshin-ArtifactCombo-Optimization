@@ -1,11 +1,14 @@
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.*;
+import java.io.File;
 
 class Main{
-
+    
     public static ArrayList<Artifact> flowerList(Artifact[] artifacts){
         ArrayList<Artifact> flower = new ArrayList<Artifact>();
         for(int i = 0; i<artifacts.length; i++){
@@ -173,7 +176,7 @@ class Main{
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         String path = "D:/20s/1000DaysOfCode/Day 2/ArtifactOptimization/arts.csv";
 
@@ -188,9 +191,60 @@ class Main{
         ArrayList<Artifact> circlet = circletList(kenan);
         
         System.out.println(flower.size() + " " + plume.size() + " " + eon.size() + " " + goblet.size() + " " + circlet.size());
+        float possibleCombinations = flower.size() * plume.size() * eon.size() * goblet.size() * circlet.size();
+        System.out.println("You have " + possibleCombinations + " possible combinations.");
 
+        Scanner s = new Scanner(System.in);
+        s.nextLine();
 
+        File output = new File("result.txt");
 
+        FileWriter fw = new FileWriter(output);
 
+        PrintWriter pw = new PrintWriter(fw);
+
+        pw.write("Artifact Set, Flat HP, Percent HP, FLat ATK, Percent ATK, Flat DEF, Percent DEF, Elemental Mastery, Percent Recharge, CRIT Rate, CRIT DMG, Healing Bonus, Physical DMG Bonus, Pyro DMG Bonus, Geo DMG Bonus, Dendro DMG Bonus, Cryo DMG Bonus, Electro DMG Bonus, Anemo DMG Bonus, Hydro DMG Bonus");
+
+        int count = 1;
+        for(int i = 0; i<flower.size(); i++){
+            for(int j = 0; j<plume.size(); j++){
+                for(int k = 0; k<eon.size(); k++){
+                    for(int l = 0; l<goblet.size(); l++){
+                        for(int m = 0; m<circlet.size(); m++){
+                            ArtifactSet as = new ArtifactSet(flower.get(i), plume.get(j), eon.get(k), goblet.get(l), circlet.get(m));
+                            pw.write(
+                                as.flower.setName + " | " + as.flower.type + " | " + as.flower.level + " ; " +
+                                as.plume.setName + " | " + as.plume.type + " | " + as.plume.level + " ; " +
+                                as.eon.setName + " | " + as.eon.type + " | " + as.eon.level + " ; " +
+                                as.goblet.setName + " | " + as.goblet.type + " | " + as.goblet.level + " ; " +
+                                as.circlet.setName + " | " + as.circlet.type + " | " + as.circlet.level + "," +
+                                as.total_flatHP() + "," + 
+                                as.total_percentHP() + "," + 
+                                as.total_flatATK() + "," + 
+                                as.total_percentATK() + "," + 
+                                as.total_flatDEF() + "," + 
+                                as.total_percentDEF() + "," + 
+                                as.total_elementalMastery() + "," + 
+                                as.total_percentRecharge() + "," + 
+                                as.total_critRate() + "," + 
+                                as.total_critDMG() + "," + 
+                                as.total_healingBonus() + "," + 
+                                as.total_physicalDMGBonus() + "," + 
+                                as.total_pyroDMGBonus() + "," + 
+                                as.total_geoDMGBonus() + "," +
+                                as.total_dendroDMGBonus() + "," +
+                                as.total_cryoDMGBonus() + "," +
+                                as.total_electroDMGBonus() + "," +
+                                as.total_anemoDMGBonus() + "," +
+                                as.total_hydroDMGBonus()
+                            );
+                            System.out.println( count + ". " + as.total_flatATK());
+                            count++;
+                        }
+                    }
+                }
+            }
+        }
+        pw.close();
     }
 }

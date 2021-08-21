@@ -6,27 +6,27 @@ class Artifact{
     public String setName;
 
     //Artifact Stats
-    private float healingBonus;
-    private float physicalDMGBonus;
-    private float pyroDMGBonus;
-    private float geoDMGBonus;
-    private float dendroDMGBonus;
-    private float cryoDMGBonus;
-    private float electroDMGBonus;
-    private float anemoDMGBonus;
-    private float hydroDMGBonus;
+    private float healingBonus = 0;
+    private float physicalDMGBonus = 0;
+    private float pyroDMGBonus = 0;
+    private float geoDMGBonus = 0;
+    private float dendroDMGBonus = 0;
+    private float cryoDMGBonus = 0;
+    private float electroDMGBonus = 0;
+    private float anemoDMGBonus = 0;
+    private float hydroDMGBonus = 0;
 
     //sub stats
-    private float flatHP;
-    private float percentHP;
-    private float flatATK;
-    private float percentATK;
-    private float flatDEF;
-    private float percentDEF;
-    private float elementalMastery;
-    private float percentRecharge;
-    private float critRate;
-    private float critDMG;
+    private float flatHP = 0;
+    private float percentHP = 0;
+    private float flatATK = 0;
+    private float percentATK = 0;
+    private float flatDEF = 0;
+    private float percentDEF = 0;
+    private float elementalMastery = 0;
+    private float percentRecharge = 0;
+    private float critRate = 0;
+    private float critDMG = 0;
 
     Artifact(String level, String type, String setName){
         this.level = level;
